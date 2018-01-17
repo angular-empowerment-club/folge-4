@@ -5,6 +5,7 @@ import { LOCALE_ID, NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { StockCardComponent } from './stock-card/stock-card.component';
 import { StockDetailsComponent } from './stock-details/stock-details.component';
+import { UpperOrLowercasePipe } from './pipes/upper-or-lowercase.pipe';
 
 import localeDe from '@angular/common/locales/de';
 
@@ -14,7 +15,8 @@ registerLocaleData(localeDe);
   declarations: [
     AppComponent,
     StockCardComponent,
-    StockDetailsComponent
+    StockDetailsComponent,
+    UpperOrLowercasePipe
   ],
   imports: [
     BrowserModule

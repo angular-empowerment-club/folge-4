@@ -7,7 +7,7 @@
       <i class="icon icon-plus"></i>
     </button>
     <div class="card-title h5">
-      {{ stockQuote.symbol }}
+      {{ stockQuote.symbol | upperOrLowercase:true }}
       <span class="card-title-addition">
         {{ stockQuote.last | currency:'EUR' }}
       </span>
