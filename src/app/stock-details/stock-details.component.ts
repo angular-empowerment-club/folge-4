@@ -1,4 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
+import { StockQuoteDetails } from '../models';
 
 @Component({
   selector: 'aec-stock-details',
@@ -6,5 +8,5 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./stock-details.component.css']
 })
 export class StockDetailsComponent {
-  @Input() stockQuoteDetails;
+  @Input() stockQuoteDetails: StockQuoteDetails;
 }

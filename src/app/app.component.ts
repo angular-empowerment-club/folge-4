@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 
+import { StockQuote } from './models';
+
 @Component({
   selector: 'aec-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  tsla = {
+  tsla: StockQuote = {
     symbol: 'tsla',
     company: 'Tesla Inc',
     last: 285,

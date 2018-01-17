@@ -1,4 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
+import { StockQuote } from '../models';
 
 @Component({
   selector: 'aec-stock-card',
@@ -12,7 +14,7 @@ export class StockCardComponent {
     return Object.keys(this.stockQuote.details).length;
   }
 
-  @Input() stockQuote;
+  @Input() stockQuote: StockQuote;
 
   toggleDetailsViewVisibility() {
     this.isDetailsViewHidden = !this.isDetailsViewHidden;
