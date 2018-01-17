@@ -9,7 +9,7 @@
     <div class="card-title h5">
       {{ stockQuote.symbol }}
       <span class="card-title-addition">
-        {{ stockQuote.last }}
+        {{ stockQuote.last | currency:'EUR' }}
       </span>
     </div>
     <div class="card-subtitle text-gray">
