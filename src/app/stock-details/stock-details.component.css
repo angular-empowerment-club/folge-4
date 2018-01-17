@@ -1,3 +1,7 @@
+:host {
+  display: block;
+}
+
 h6 {
   padding-top: 8px;
 }

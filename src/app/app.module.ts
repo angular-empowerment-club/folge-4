@@ -1,3 +1,4 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { registerLocaleData } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { LOCALE_ID, NgModule } from '@angular/core';
@@ -19,7 +20,8 @@ registerLocaleData(localeDe);
     UpperOrLowercasePipe
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule
   ],
   providers: [ { provide: LOCALE_ID, useValue: 'de' } ],
   bootstrap: [AppComponent]

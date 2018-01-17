@@ -18,7 +18,7 @@
   </div>
   <div class="card-body">
     <aec-stock-details
-      [hidden]="isDetailsViewHidden"
+      [@detailsVisibility]="visibilityState"
       [stockQuoteDetails]="stockQuote.details">
     </aec-stock-details>
   </div>
