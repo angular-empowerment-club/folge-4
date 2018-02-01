@@ -23,15 +23,15 @@ export class StockCardComponent {
   @Input() stockQuote: StockQuote;
 
   toggleDetailsViewVisibility() {
+    this.detailsVisibility = this.detailsVisibility.next();
+
     /**
      * @before
      * if (this.visibilityState === 'hidden') {
-        this.visibilityState = 'shown';
-      } else {
-        this.visibilityState = 'hidden';
-      }
-    */
-
-    this.detailsVisibility = this.detailsVisibility.toggle();
+     *   this.visibilityState = 'shown';
+     * } else {
+     *   this.visibilityState = 'hidden';
+     * }
+     */
   }
 }

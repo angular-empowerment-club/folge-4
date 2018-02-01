@@ -3,7 +3,7 @@ import { ElementChangingVisibility } from './element-changing-visibility';
 export class HiddenElement implements ElementChangingVisibility {
   readonly visibleness = 'hidden';
 
-  toggle() {
+  next() {
     return new ShownElement();
   }
 }
@@ -11,7 +11,7 @@ export class HiddenElement implements ElementChangingVisibility {
 export class ShownElement implements ElementChangingVisibility {
   readonly visibleness = 'shown';
 
-  toggle() {
+  next() {
     return new HiddenElement();
   }
 }
