@@ -8,6 +8,7 @@ import { StockQuoteRisk } from '../models';
   styleUrls: ['./stock-risk-switcher.component.css']
 })
 export class StockRiskSwitcherComponent {
+  uniqueName = 'risk_' + Math.floor(Math.random() * 20);
   risks = StockQuoteRisk;
 
   @Output() choose = new EventEmitter<StockQuoteRisk>();

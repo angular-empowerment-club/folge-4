@@ -27,14 +27,30 @@ import { StockQuote, StockQuoteRisk } from './models';
   ]
 })
 export class AppComponent {
-  tsla: StockQuote = {
-    symbol: 'tsla',
-    company: 'Tesla Inc',
-    last: 285,
-    risk: StockQuoteRisk.NotRated,
-    details: {
-      lastUpdateOn: new Date(2018, 0, 17, 21, 29),
-      nextEarnings: new Date(2018, 1, 28)
+  stockQoutes: StockQuote[] = [
+    {
+      symbol: 'tsla',
+      company: 'Tesla Inc',
+      last: 285,
+      risk: StockQuoteRisk.NotRated,
+      details: {
+        lastUpdateOn: new Date(2018, 0, 17, 21, 29),
+        nextEarnings: new Date(2018, 1, 28)
+      }
+    },
+    {
+      symbol: 'aapl',
+      company: 'Apple',
+      last: 650,
+      risk: StockQuoteRisk.NotRated,
+      details: {
+        lastUpdateOn: new Date(2018, 0, 17, 21, 29),
+        nextEarnings: new Date(2018, 1, 28)
+      }
     }
-  };
+  ];
+
+  updateRisk(stock: StockQuote, risk: StockQuoteRisk) {
+    stock.risk = risk;
+  }
 }
