@@ -1,5 +1,6 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { registerLocaleData } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { LOCALE_ID, NgModule } from '@angular/core';
 
@@ -23,7 +24,8 @@ registerLocaleData(localeDe);
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [ { provide: LOCALE_ID, useValue: 'de' } ],
   bootstrap: [AppComponent]
