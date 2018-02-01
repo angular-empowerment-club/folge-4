@@ -1,42 +1,17 @@
-import {
-  animate,
-  state,
-  style,
-  transition,
-  trigger
-} from '@angular/animations';
 import { Component, Input } from '@angular/core';
-
-import { StockQuote } from '../models';
 import {
   ElementChangingVisibility,
   HiddenElement
 } from '@utilities/animations';
 
+import { StockQuote } from '../models';
+import { detailsVisibility } from './stock-card.animations';
+
 @Component({
   selector: 'aec-stock-card',
   templateUrl: './stock-card.component.html',
   styleUrls: ['./stock-card.component.css'],
-  animations: [
-    trigger('detailsVisibility', [
-      state(
-        'hidden',
-        style({
-          opacity: 0,
-          display: 'none'
-        })
-      ),
-      state(
-        'shown',
-        style({
-          opacity: 1,
-          display: 'block'
-        })
-      ),
-      transition('hidden => shown', animate('1000ms ease-in')),
-      transition('shown => hidden', animate('1000ms ease-out'))
-    ])
-  ]
+  animations: [detailsVisibility]
 })
 export class StockCardComponent {
   detailsVisibility: ElementChangingVisibility = new HiddenElement();
@@ -48,6 +23,15 @@ export class StockCardComponent {
   @Input() stockQuote: StockQuote;
 
   toggleDetailsViewVisibility() {
+    /**
+     * @before
+     * if (this.visibilityState === 'hidden') {
+        this.visibilityState = 'shown';
+      } else {
+        this.visibilityState = 'hidden';
+      }
+    */
+
     this.detailsVisibility = this.detailsVisibility.toggle();
   }
 }
