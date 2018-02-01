@@ -1,10 +1,11 @@
 <h1>Your Stocks</h1>
 <aec-stock-card
   [@flyInOut]="'in'"
-  [stockQuote]="tsla">
-    <aec-stock-details [stockQuoteDetails]="tsla.details"></aec-stock-details>
+  [stockQuote]="stock"
+  *ngFor="let stock of stockQoutes">
+    <aec-stock-details [stockQuoteDetails]="stock.details"></aec-stock-details>
     <aec-stock-risk-switcher
-      [current]="tsla.risk"
-      (choose)="tsla.risk = $event">
+      [current]="stock.risk"
+      (choose)="updateRisk(stock, $event)">
     </aec-stock-risk-switcher>
 </aec-stock-card>
