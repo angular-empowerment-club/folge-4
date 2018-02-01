@@ -9,6 +9,7 @@ import { StockDetailsComponent } from './stock-details/stock-details.component';
 import { UpperOrLowercasePipe } from './pipes/upper-or-lowercase.pipe';
 
 import localeDe from '@angular/common/locales/de';
+import { StockRiskSwitcherComponent } from './stock-risk-switcher/stock-risk-switcher.component';
 
 registerLocaleData(localeDe);
 
@@ -17,7 +18,8 @@ registerLocaleData(localeDe);
     AppComponent,
     StockCardComponent,
     StockDetailsComponent,
-    UpperOrLowercasePipe
+    UpperOrLowercasePipe,
+    StockRiskSwitcherComponent
   ],
   imports: [
     BrowserModule,
