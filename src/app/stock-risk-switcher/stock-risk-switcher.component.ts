@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+
 import { StockQuoteRisk } from '../models';
 
 @Component({
@@ -6,12 +7,9 @@ import { StockQuoteRisk } from '../models';
   templateUrl: './stock-risk-switcher.component.html',
   styleUrls: ['./stock-risk-switcher.component.css']
 })
-export class StockRiskSwitcherComponent implements OnInit {
+export class StockRiskSwitcherComponent {
   risks = StockQuoteRisk;
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  @Output() choose = new EventEmitter<StockQuoteRisk>();
+  @Input() current: StockQuoteRisk;
 }

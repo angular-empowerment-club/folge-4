@@ -7,7 +7,7 @@ import {
 } from '@angular/animations';
 import { Component } from '@angular/core';
 
-import { StockQuote } from './models';
+import { StockQuote, StockQuoteRisk } from './models';
 
 @Component({
   selector: 'aec-root',
@@ -31,6 +31,7 @@ export class AppComponent {
     symbol: 'tsla',
     company: 'Tesla Inc',
     last: 285,
+    risk: StockQuoteRisk.NotRated,
     details: {
       lastUpdateOn: new Date(2018, 0, 17, 21, 29),
       nextEarnings: new Date(2018, 1, 28)
