@@ -16,10 +16,9 @@
       {{ stockQuote.company }}
     </div>
   </div>
-  <div class="card-body">
-    <aec-stock-details
-      [@detailsVisibility]="detailsVisibility.visibleness"
-      [stockQuoteDetails]="stockQuote.details">
-    </aec-stock-details>
+  <div
+    [@detailsVisibility]="detailsVisibility.visibleness"
+    class="card-body">
+    <ng-content></ng-content>
   </div>
 </div>
